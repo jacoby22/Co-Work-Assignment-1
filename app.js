@@ -17,7 +17,7 @@ function sum(num1, num2) {
 
 
 // Here is the test for sum(); uncomment it to run it
-sum(4, 7);
+//sum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -38,7 +38,7 @@ function multiply(num1, num2) {
 }
 
 // Here is the test for multiply(); uncomment it to run it
-multiply(4,7);
+//multiply(4,7);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -61,7 +61,7 @@ function sumAndMultiply(num1, num2, num3) {
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-sumAndMultiply(4,7,5);
+//sumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
@@ -74,7 +74,7 @@ Write a function called sumArray() that takes in an array of numbers as its argu
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-testArray = [2,3,4];
+//testArray = [2,3,4];
 function sumArray(someArr) {
   var arr = [ ];
   var total = 0;
@@ -93,7 +93,7 @@ function sumArray(someArr) {
   return arr;
 }
 // Here is the test for sumArray(); uncomment it to run it
-sumArray(testArray);
+//sumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -106,6 +106,23 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+function multiplyArray(someArr) {
+  var arr = [ ];
+  var product = 1;
+  var string = 'The numbers ';
+  for (var i = 0; i < someArr.length; i++) {
+    product *= someArr[i];
+    if (i < someArr.length - 1) {
+      string = string + someArr[i] + ',';
+    }
+    else {
+      string = string + someArr[i];
+    }
+  }
+  string = string + ' have a product of ' + product + '.';
+  arr.push(product, string);
+  return arr;
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 //testMultiplyArray(2,3,4);
