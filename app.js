@@ -8,7 +8,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-function testSum(num1, num2) {
+function sum(num1, num2) {
   var total = num1 + num2;
   var arr = [ ];
   arr.push (total, 'The sum of ' + num1 + ' and ' + num2 + ' is ' + total + '.');
@@ -17,7 +17,7 @@ function testSum(num1, num2) {
 
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+sum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -30,7 +30,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function testMultiply(num1, num2) {
+function multiply(num1, num2) {
   var product = num1 * num2;
   var arr = [ ];
   arr.push (product, 'The product of ' + num1 + ' and ' + num2 + ' is ' + product + '.');
@@ -38,7 +38,7 @@ function testMultiply(num1, num2) {
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(4,7);
+multiply(4,7);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -52,7 +52,7 @@ Fourth element: "The product of 4 and 7 and 5 is 140."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function testSumAndMultiply(num1, num2, num3) {
+function sumAndMultiply(num1, num2, num3) {
   var product = num1 * num2 * num3;
   var total = num1 + num2 + num3;
   var arr = [ ];
@@ -61,7 +61,7 @@ function testSumAndMultiply(num1, num2, num3) {
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+sumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
@@ -75,9 +75,25 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 testArray = [2,3,4];
-
+function sumArray(someArr) {
+  var arr = [ ];
+  var total = 0;
+  var string = '';
+  for (var i = 0; i < someArr.length; i++) {
+    total += someArr[i];
+    if (i < someArr.length - 1) {
+      string = string + someArr[i] + ',';
+    }
+    else {
+      string = string + someArr[i];
+    }
+  }
+  string = string + ' was passed in as an array of numbers, and ' + total + ' is their sum.';
+  arr.push(total, string);
+  return arr;
+}
 // Here is the test for sumArray(); uncomment it to run it
-testSumArray(testArray);
+sumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -92,7 +108,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(2,3,4);
+//testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
